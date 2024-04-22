@@ -29,7 +29,7 @@ const OrderForm: React.FC = () => {
   const [orderId, setOrderId] = useState<string>(generateShortId());
 
   useEffect(() => {
-    const socket = io("http://localhost:4000");//Cambiar hacia socket desplegado
+    const socket = io("http://52.22.232.79:4000");//Cambiar hacia socket desplegado
     socket.on("receiveData", (orden: any) => {
       console.log(orden);
       Swal.fire({
